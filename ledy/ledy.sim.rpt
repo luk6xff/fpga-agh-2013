@@ -1,0 +1,356 @@
+Simulator report for ledy
+Tue Dec 03 23:38:45 2013
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 108 nodes    ;
+; Simulation Coverage         ;      52.27 % ;
+; Total Number of Transitions ; 3072         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                    ;
++--------------------------------------------------------------------------------------------+----------+---------------+
+; Option                                                                                     ; Setting  ; Default Value ;
++--------------------------------------------------------------------------------------------+----------+---------------+
+; Simulation mode                                                                            ; Timing   ; Timing        ;
+; Start time                                                                                 ; 0 ns     ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF     ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On       ; On            ;
+; Check outputs                                                                              ; Off      ; Off           ;
+; Report simulation coverage                                                                 ; On       ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On       ; On            ;
+; Display missing 1-value coverage report                                                    ; On       ; On            ;
+; Display missing 0-value coverage report                                                    ; On       ; On            ;
+; Detect setup and hold time violations                                                      ; Off      ; Off           ;
+; Detect glitches                                                                            ; Off      ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off      ; Off           ;
+; Generate Signal Activity File                                                              ; Off      ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off      ; Off           ;
+; Group bus channels in simulation results                                                   ; Off      ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On       ; On            ;
+; Trigger vector comparison with the specified mode                                          ; ALL_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off      ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off      ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto     ; Auto          ;
++--------------------------------------------------------------------------------------------+----------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      52.27 % ;
+; Total nodes checked                                 ; 108          ;
+; Total output ports checked                          ; 132          ;
+; Total output ports with complete 1/0-value coverage ; 69           ;
+; Total output ports with no 1/0-value coverage       ; 63           ;
+; Total output ports with no 1-value coverage         ; 63           ;
+; Total output ports with no 0-value coverage         ; 63           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                            ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |ledy|freq_div:inst1|Add0~0      ; |ledy|freq_div:inst1|Add0~0      ; combout          ;
+; |ledy|freq_div:inst1|Add0~0      ; |ledy|freq_div:inst1|Add0~1      ; cout             ;
+; |ledy|freq_div:inst1|Add0~2      ; |ledy|freq_div:inst1|Add0~2      ; combout          ;
+; |ledy|freq_div:inst1|Add0~2      ; |ledy|freq_div:inst1|Add0~3      ; cout             ;
+; |ledy|freq_div:inst1|Add0~4      ; |ledy|freq_div:inst1|Add0~4      ; combout          ;
+; |ledy|freq_div:inst1|Add0~4      ; |ledy|freq_div:inst1|Add0~5      ; cout             ;
+; |ledy|freq_div:inst1|Add0~6      ; |ledy|freq_div:inst1|Add0~6      ; combout          ;
+; |ledy|freq_div:inst1|Add0~6      ; |ledy|freq_div:inst1|Add0~7      ; cout             ;
+; |ledy|freq_div:inst1|Add0~8      ; |ledy|freq_div:inst1|Add0~8      ; combout          ;
+; |ledy|freq_div:inst1|Add0~8      ; |ledy|freq_div:inst1|Add0~9      ; cout             ;
+; |ledy|freq_div:inst1|Add0~10     ; |ledy|freq_div:inst1|Add0~10     ; combout          ;
+; |ledy|freq_div:inst1|clk_out     ; |ledy|freq_div:inst1|clk_out     ; regout           ;
+; |ledy|green_leds:inst|leds[8]    ; |ledy|green_leds:inst|leds[8]    ; regout           ;
+; |ledy|green_leds:inst|leds[7]    ; |ledy|green_leds:inst|leds[7]    ; regout           ;
+; |ledy|green_leds:inst|leds[6]    ; |ledy|green_leds:inst|leds[6]    ; regout           ;
+; |ledy|green_leds:inst|leds[5]    ; |ledy|green_leds:inst|leds[5]    ; regout           ;
+; |ledy|green_leds:inst|leds[4]    ; |ledy|green_leds:inst|leds[4]    ; regout           ;
+; |ledy|green_leds:inst|leds[3]    ; |ledy|green_leds:inst|leds[3]    ; regout           ;
+; |ledy|green_leds:inst|leds[2]    ; |ledy|green_leds:inst|leds[2]    ; regout           ;
+; |ledy|green_leds:inst|leds[1]    ; |ledy|green_leds:inst|leds[1]    ; regout           ;
+; |ledy|green_leds:inst|leds[0]    ; |ledy|green_leds:inst|leds[0]    ; regout           ;
+; |ledy|freq_div:inst1|i[0]        ; |ledy|freq_div:inst1|i[0]        ; regout           ;
+; |ledy|freq_div:inst1|i[3]        ; |ledy|freq_div:inst1|i[3]        ; regout           ;
+; |ledy|freq_div:inst1|i[2]        ; |ledy|freq_div:inst1|i[2]        ; regout           ;
+; |ledy|freq_div:inst1|i[1]        ; |ledy|freq_div:inst1|i[1]        ; regout           ;
+; |ledy|freq_div:inst1|Equal0~0    ; |ledy|freq_div:inst1|Equal0~0    ; combout          ;
+; |ledy|freq_div:inst1|i[4]        ; |ledy|freq_div:inst1|i[4]        ; regout           ;
+; |ledy|freq_div:inst1|Equal0~1    ; |ledy|freq_div:inst1|Equal0~1    ; combout          ;
+; |ledy|freq_div:inst1|Equal0~4    ; |ledy|freq_div:inst1|Equal0~4    ; combout          ;
+; |ledy|freq_div:inst1|Equal0~7    ; |ledy|freq_div:inst1|Equal0~7    ; combout          ;
+; |ledy|green_leds:inst|i[0]       ; |ledy|green_leds:inst|i[0]       ; regout           ;
+; |ledy|green_leds:inst|i[3]       ; |ledy|green_leds:inst|i[3]       ; regout           ;
+; |ledy|green_leds:inst|i[1]       ; |ledy|green_leds:inst|i[1]       ; regout           ;
+; |ledy|green_leds:inst|i[2]       ; |ledy|green_leds:inst|i[2]       ; regout           ;
+; |ledy|green_leds:inst|i~0        ; |ledy|green_leds:inst|i~0        ; combout          ;
+; |ledy|green_leds:inst|flag       ; |ledy|green_leds:inst|flag       ; regout           ;
+; |ledy|green_leds:inst|i~1        ; |ledy|green_leds:inst|i~1        ; combout          ;
+; |ledy|green_leds:inst|i~2        ; |ledy|green_leds:inst|i~2        ; combout          ;
+; |ledy|green_leds:inst|i~3        ; |ledy|green_leds:inst|i~3        ; combout          ;
+; |ledy|green_leds:inst|i~4        ; |ledy|green_leds:inst|i~4        ; combout          ;
+; |ledy|green_leds:inst|i~5        ; |ledy|green_leds:inst|i~5        ; combout          ;
+; |ledy|green_leds:inst|Decoder0~0 ; |ledy|green_leds:inst|Decoder0~0 ; combout          ;
+; |ledy|green_leds:inst|Decoder0~1 ; |ledy|green_leds:inst|Decoder0~1 ; combout          ;
+; |ledy|green_leds:inst|Decoder0~2 ; |ledy|green_leds:inst|Decoder0~2 ; combout          ;
+; |ledy|green_leds:inst|Decoder0~3 ; |ledy|green_leds:inst|Decoder0~3 ; combout          ;
+; |ledy|green_leds:inst|Decoder0~4 ; |ledy|green_leds:inst|Decoder0~4 ; combout          ;
+; |ledy|green_leds:inst|Decoder0~5 ; |ledy|green_leds:inst|Decoder0~5 ; combout          ;
+; |ledy|green_leds:inst|Decoder0~6 ; |ledy|green_leds:inst|Decoder0~6 ; combout          ;
+; |ledy|green_leds:inst|Decoder0~7 ; |ledy|green_leds:inst|Decoder0~7 ; combout          ;
+; |ledy|green_leds:inst|Decoder0~8 ; |ledy|green_leds:inst|Decoder0~8 ; combout          ;
+; |ledy|freq_div:inst1|i~1         ; |ledy|freq_div:inst1|i~1         ; combout          ;
+; |ledy|freq_div:inst1|i~2         ; |ledy|freq_div:inst1|i~2         ; combout          ;
+; |ledy|freq_div:inst1|i~3         ; |ledy|freq_div:inst1|i~3         ; combout          ;
+; |ledy|green_leds:inst|flag~0     ; |ledy|green_leds:inst|flag~0     ; combout          ;
+; |ledy|green_leds:inst|flag~1     ; |ledy|green_leds:inst|flag~1     ; combout          ;
+; |ledy|out_clk                    ; |ledy|out_clk                    ; padio            ;
+; |ledy|leds[8]                    ; |ledy|leds[8]                    ; padio            ;
+; |ledy|leds[7]                    ; |ledy|leds[7]                    ; padio            ;
+; |ledy|leds[6]                    ; |ledy|leds[6]                    ; padio            ;
+; |ledy|leds[5]                    ; |ledy|leds[5]                    ; padio            ;
+; |ledy|leds[4]                    ; |ledy|leds[4]                    ; padio            ;
+; |ledy|leds[3]                    ; |ledy|leds[3]                    ; padio            ;
+; |ledy|leds[2]                    ; |ledy|leds[2]                    ; padio            ;
+; |ledy|leds[1]                    ; |ledy|leds[1]                    ; padio            ;
+; |ledy|leds[0]                    ; |ledy|leds[0]                    ; padio            ;
+; |ledy|clk                        ; |ledy|clk~corein                 ; combout          ;
+; |ledy|clk_l                      ; |ledy|clk_l~corein               ; combout          ;
+; |ledy|clk_l~clkctrl              ; |ledy|clk_l~clkctrl              ; outclk           ;
+; |ledy|clk~clkctrl                ; |ledy|clk~clkctrl                ; outclk           ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                         ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |ledy|freq_div:inst1|Add0~10  ; |ledy|freq_div:inst1|Add0~11  ; cout             ;
+; |ledy|freq_div:inst1|Add0~12  ; |ledy|freq_div:inst1|Add0~12  ; combout          ;
+; |ledy|freq_div:inst1|Add0~12  ; |ledy|freq_div:inst1|Add0~13  ; cout             ;
+; |ledy|freq_div:inst1|Add0~14  ; |ledy|freq_div:inst1|Add0~14  ; combout          ;
+; |ledy|freq_div:inst1|Add0~14  ; |ledy|freq_div:inst1|Add0~15  ; cout             ;
+; |ledy|freq_div:inst1|Add0~16  ; |ledy|freq_div:inst1|Add0~16  ; combout          ;
+; |ledy|freq_div:inst1|Add0~16  ; |ledy|freq_div:inst1|Add0~17  ; cout             ;
+; |ledy|freq_div:inst1|Add0~18  ; |ledy|freq_div:inst1|Add0~18  ; combout          ;
+; |ledy|freq_div:inst1|Add0~18  ; |ledy|freq_div:inst1|Add0~19  ; cout             ;
+; |ledy|freq_div:inst1|Add0~20  ; |ledy|freq_div:inst1|Add0~20  ; combout          ;
+; |ledy|freq_div:inst1|Add0~20  ; |ledy|freq_div:inst1|Add0~21  ; cout             ;
+; |ledy|freq_div:inst1|Add0~22  ; |ledy|freq_div:inst1|Add0~22  ; combout          ;
+; |ledy|freq_div:inst1|Add0~22  ; |ledy|freq_div:inst1|Add0~23  ; cout             ;
+; |ledy|freq_div:inst1|Add0~24  ; |ledy|freq_div:inst1|Add0~24  ; combout          ;
+; |ledy|freq_div:inst1|Add0~24  ; |ledy|freq_div:inst1|Add0~25  ; cout             ;
+; |ledy|freq_div:inst1|Add0~26  ; |ledy|freq_div:inst1|Add0~26  ; combout          ;
+; |ledy|freq_div:inst1|Add0~26  ; |ledy|freq_div:inst1|Add0~27  ; cout             ;
+; |ledy|freq_div:inst1|Add0~28  ; |ledy|freq_div:inst1|Add0~28  ; combout          ;
+; |ledy|freq_div:inst1|Add0~28  ; |ledy|freq_div:inst1|Add0~29  ; cout             ;
+; |ledy|freq_div:inst1|Add0~30  ; |ledy|freq_div:inst1|Add0~30  ; combout          ;
+; |ledy|freq_div:inst1|Add0~30  ; |ledy|freq_div:inst1|Add0~31  ; cout             ;
+; |ledy|freq_div:inst1|Add0~32  ; |ledy|freq_div:inst1|Add0~32  ; combout          ;
+; |ledy|freq_div:inst1|Add0~32  ; |ledy|freq_div:inst1|Add0~33  ; cout             ;
+; |ledy|freq_div:inst1|Add0~34  ; |ledy|freq_div:inst1|Add0~34  ; combout          ;
+; |ledy|freq_div:inst1|Add0~34  ; |ledy|freq_div:inst1|Add0~35  ; cout             ;
+; |ledy|freq_div:inst1|Add0~36  ; |ledy|freq_div:inst1|Add0~36  ; combout          ;
+; |ledy|freq_div:inst1|Add0~36  ; |ledy|freq_div:inst1|Add0~37  ; cout             ;
+; |ledy|freq_div:inst1|Add0~38  ; |ledy|freq_div:inst1|Add0~38  ; combout          ;
+; |ledy|freq_div:inst1|Add0~38  ; |ledy|freq_div:inst1|Add0~39  ; cout             ;
+; |ledy|freq_div:inst1|Add0~40  ; |ledy|freq_div:inst1|Add0~40  ; combout          ;
+; |ledy|freq_div:inst1|Add0~40  ; |ledy|freq_div:inst1|Add0~41  ; cout             ;
+; |ledy|freq_div:inst1|Add0~42  ; |ledy|freq_div:inst1|Add0~42  ; combout          ;
+; |ledy|freq_div:inst1|Add0~42  ; |ledy|freq_div:inst1|Add0~43  ; cout             ;
+; |ledy|freq_div:inst1|Add0~44  ; |ledy|freq_div:inst1|Add0~44  ; combout          ;
+; |ledy|freq_div:inst1|Add0~44  ; |ledy|freq_div:inst1|Add0~45  ; cout             ;
+; |ledy|freq_div:inst1|Add0~46  ; |ledy|freq_div:inst1|Add0~46  ; combout          ;
+; |ledy|freq_div:inst1|Add0~46  ; |ledy|freq_div:inst1|Add0~47  ; cout             ;
+; |ledy|freq_div:inst1|Add0~48  ; |ledy|freq_div:inst1|Add0~48  ; combout          ;
+; |ledy|freq_div:inst1|i[5]     ; |ledy|freq_div:inst1|i[5]     ; regout           ;
+; |ledy|freq_div:inst1|i[6]     ; |ledy|freq_div:inst1|i[6]     ; regout           ;
+; |ledy|freq_div:inst1|i[7]     ; |ledy|freq_div:inst1|i[7]     ; regout           ;
+; |ledy|freq_div:inst1|i[8]     ; |ledy|freq_div:inst1|i[8]     ; regout           ;
+; |ledy|freq_div:inst1|i[9]     ; |ledy|freq_div:inst1|i[9]     ; regout           ;
+; |ledy|freq_div:inst1|i[10]    ; |ledy|freq_div:inst1|i[10]    ; regout           ;
+; |ledy|freq_div:inst1|i[11]    ; |ledy|freq_div:inst1|i[11]    ; regout           ;
+; |ledy|freq_div:inst1|Equal0~2 ; |ledy|freq_div:inst1|Equal0~2 ; combout          ;
+; |ledy|freq_div:inst1|i[12]    ; |ledy|freq_div:inst1|i[12]    ; regout           ;
+; |ledy|freq_div:inst1|i[13]    ; |ledy|freq_div:inst1|i[13]    ; regout           ;
+; |ledy|freq_div:inst1|i[14]    ; |ledy|freq_div:inst1|i[14]    ; regout           ;
+; |ledy|freq_div:inst1|i[15]    ; |ledy|freq_div:inst1|i[15]    ; regout           ;
+; |ledy|freq_div:inst1|Equal0~3 ; |ledy|freq_div:inst1|Equal0~3 ; combout          ;
+; |ledy|freq_div:inst1|i[16]    ; |ledy|freq_div:inst1|i[16]    ; regout           ;
+; |ledy|freq_div:inst1|i[17]    ; |ledy|freq_div:inst1|i[17]    ; regout           ;
+; |ledy|freq_div:inst1|i[18]    ; |ledy|freq_div:inst1|i[18]    ; regout           ;
+; |ledy|freq_div:inst1|i[19]    ; |ledy|freq_div:inst1|i[19]    ; regout           ;
+; |ledy|freq_div:inst1|Equal0~5 ; |ledy|freq_div:inst1|Equal0~5 ; combout          ;
+; |ledy|freq_div:inst1|i[20]    ; |ledy|freq_div:inst1|i[20]    ; regout           ;
+; |ledy|freq_div:inst1|i[21]    ; |ledy|freq_div:inst1|i[21]    ; regout           ;
+; |ledy|freq_div:inst1|i[22]    ; |ledy|freq_div:inst1|i[22]    ; regout           ;
+; |ledy|freq_div:inst1|i[23]    ; |ledy|freq_div:inst1|i[23]    ; regout           ;
+; |ledy|freq_div:inst1|Equal0~6 ; |ledy|freq_div:inst1|Equal0~6 ; combout          ;
+; |ledy|freq_div:inst1|i[24]    ; |ledy|freq_div:inst1|i[24]    ; regout           ;
+; |ledy|freq_div:inst1|i~0      ; |ledy|freq_div:inst1|i~0      ; combout          ;
++-------------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                         ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |ledy|freq_div:inst1|Add0~10  ; |ledy|freq_div:inst1|Add0~11  ; cout             ;
+; |ledy|freq_div:inst1|Add0~12  ; |ledy|freq_div:inst1|Add0~12  ; combout          ;
+; |ledy|freq_div:inst1|Add0~12  ; |ledy|freq_div:inst1|Add0~13  ; cout             ;
+; |ledy|freq_div:inst1|Add0~14  ; |ledy|freq_div:inst1|Add0~14  ; combout          ;
+; |ledy|freq_div:inst1|Add0~14  ; |ledy|freq_div:inst1|Add0~15  ; cout             ;
+; |ledy|freq_div:inst1|Add0~16  ; |ledy|freq_div:inst1|Add0~16  ; combout          ;
+; |ledy|freq_div:inst1|Add0~16  ; |ledy|freq_div:inst1|Add0~17  ; cout             ;
+; |ledy|freq_div:inst1|Add0~18  ; |ledy|freq_div:inst1|Add0~18  ; combout          ;
+; |ledy|freq_div:inst1|Add0~18  ; |ledy|freq_div:inst1|Add0~19  ; cout             ;
+; |ledy|freq_div:inst1|Add0~20  ; |ledy|freq_div:inst1|Add0~20  ; combout          ;
+; |ledy|freq_div:inst1|Add0~20  ; |ledy|freq_div:inst1|Add0~21  ; cout             ;
+; |ledy|freq_div:inst1|Add0~22  ; |ledy|freq_div:inst1|Add0~22  ; combout          ;
+; |ledy|freq_div:inst1|Add0~22  ; |ledy|freq_div:inst1|Add0~23  ; cout             ;
+; |ledy|freq_div:inst1|Add0~24  ; |ledy|freq_div:inst1|Add0~24  ; combout          ;
+; |ledy|freq_div:inst1|Add0~24  ; |ledy|freq_div:inst1|Add0~25  ; cout             ;
+; |ledy|freq_div:inst1|Add0~26  ; |ledy|freq_div:inst1|Add0~26  ; combout          ;
+; |ledy|freq_div:inst1|Add0~26  ; |ledy|freq_div:inst1|Add0~27  ; cout             ;
+; |ledy|freq_div:inst1|Add0~28  ; |ledy|freq_div:inst1|Add0~28  ; combout          ;
+; |ledy|freq_div:inst1|Add0~28  ; |ledy|freq_div:inst1|Add0~29  ; cout             ;
+; |ledy|freq_div:inst1|Add0~30  ; |ledy|freq_div:inst1|Add0~30  ; combout          ;
+; |ledy|freq_div:inst1|Add0~30  ; |ledy|freq_div:inst1|Add0~31  ; cout             ;
+; |ledy|freq_div:inst1|Add0~32  ; |ledy|freq_div:inst1|Add0~32  ; combout          ;
+; |ledy|freq_div:inst1|Add0~32  ; |ledy|freq_div:inst1|Add0~33  ; cout             ;
+; |ledy|freq_div:inst1|Add0~34  ; |ledy|freq_div:inst1|Add0~34  ; combout          ;
+; |ledy|freq_div:inst1|Add0~34  ; |ledy|freq_div:inst1|Add0~35  ; cout             ;
+; |ledy|freq_div:inst1|Add0~36  ; |ledy|freq_div:inst1|Add0~36  ; combout          ;
+; |ledy|freq_div:inst1|Add0~36  ; |ledy|freq_div:inst1|Add0~37  ; cout             ;
+; |ledy|freq_div:inst1|Add0~38  ; |ledy|freq_div:inst1|Add0~38  ; combout          ;
+; |ledy|freq_div:inst1|Add0~38  ; |ledy|freq_div:inst1|Add0~39  ; cout             ;
+; |ledy|freq_div:inst1|Add0~40  ; |ledy|freq_div:inst1|Add0~40  ; combout          ;
+; |ledy|freq_div:inst1|Add0~40  ; |ledy|freq_div:inst1|Add0~41  ; cout             ;
+; |ledy|freq_div:inst1|Add0~42  ; |ledy|freq_div:inst1|Add0~42  ; combout          ;
+; |ledy|freq_div:inst1|Add0~42  ; |ledy|freq_div:inst1|Add0~43  ; cout             ;
+; |ledy|freq_div:inst1|Add0~44  ; |ledy|freq_div:inst1|Add0~44  ; combout          ;
+; |ledy|freq_div:inst1|Add0~44  ; |ledy|freq_div:inst1|Add0~45  ; cout             ;
+; |ledy|freq_div:inst1|Add0~46  ; |ledy|freq_div:inst1|Add0~46  ; combout          ;
+; |ledy|freq_div:inst1|Add0~46  ; |ledy|freq_div:inst1|Add0~47  ; cout             ;
+; |ledy|freq_div:inst1|Add0~48  ; |ledy|freq_div:inst1|Add0~48  ; combout          ;
+; |ledy|freq_div:inst1|i[5]     ; |ledy|freq_div:inst1|i[5]     ; regout           ;
+; |ledy|freq_div:inst1|i[6]     ; |ledy|freq_div:inst1|i[6]     ; regout           ;
+; |ledy|freq_div:inst1|i[7]     ; |ledy|freq_div:inst1|i[7]     ; regout           ;
+; |ledy|freq_div:inst1|i[8]     ; |ledy|freq_div:inst1|i[8]     ; regout           ;
+; |ledy|freq_div:inst1|i[9]     ; |ledy|freq_div:inst1|i[9]     ; regout           ;
+; |ledy|freq_div:inst1|i[10]    ; |ledy|freq_div:inst1|i[10]    ; regout           ;
+; |ledy|freq_div:inst1|i[11]    ; |ledy|freq_div:inst1|i[11]    ; regout           ;
+; |ledy|freq_div:inst1|Equal0~2 ; |ledy|freq_div:inst1|Equal0~2 ; combout          ;
+; |ledy|freq_div:inst1|i[12]    ; |ledy|freq_div:inst1|i[12]    ; regout           ;
+; |ledy|freq_div:inst1|i[13]    ; |ledy|freq_div:inst1|i[13]    ; regout           ;
+; |ledy|freq_div:inst1|i[14]    ; |ledy|freq_div:inst1|i[14]    ; regout           ;
+; |ledy|freq_div:inst1|i[15]    ; |ledy|freq_div:inst1|i[15]    ; regout           ;
+; |ledy|freq_div:inst1|Equal0~3 ; |ledy|freq_div:inst1|Equal0~3 ; combout          ;
+; |ledy|freq_div:inst1|i[16]    ; |ledy|freq_div:inst1|i[16]    ; regout           ;
+; |ledy|freq_div:inst1|i[17]    ; |ledy|freq_div:inst1|i[17]    ; regout           ;
+; |ledy|freq_div:inst1|i[18]    ; |ledy|freq_div:inst1|i[18]    ; regout           ;
+; |ledy|freq_div:inst1|i[19]    ; |ledy|freq_div:inst1|i[19]    ; regout           ;
+; |ledy|freq_div:inst1|Equal0~5 ; |ledy|freq_div:inst1|Equal0~5 ; combout          ;
+; |ledy|freq_div:inst1|i[20]    ; |ledy|freq_div:inst1|i[20]    ; regout           ;
+; |ledy|freq_div:inst1|i[21]    ; |ledy|freq_div:inst1|i[21]    ; regout           ;
+; |ledy|freq_div:inst1|i[22]    ; |ledy|freq_div:inst1|i[22]    ; regout           ;
+; |ledy|freq_div:inst1|i[23]    ; |ledy|freq_div:inst1|i[23]    ; regout           ;
+; |ledy|freq_div:inst1|Equal0~6 ; |ledy|freq_div:inst1|Equal0~6 ; combout          ;
+; |ledy|freq_div:inst1|i[24]    ; |ledy|freq_div:inst1|i[24]    ; regout           ;
+; |ledy|freq_div:inst1|i~0      ; |ledy|freq_div:inst1|i~0      ; combout          ;
++-------------------------------+-------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Dec 03 23:38:44 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off ledy -c ledy
+Info: Using vector source file "C:/Users/lukasz/Desktop/kolos/ledy/ledy.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      52.27 %
+Info: Number of transitions in simulation is 3072
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 136 megabytes
+    Info: Processing ended: Tue Dec 03 23:38:45 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

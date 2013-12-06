@@ -1,0 +1,49 @@
+|wysw
+HEX[0] <= block_name:inst.HEX[0]
+HEX[1] <= block_name:inst.HEX[1]
+HEX[2] <= block_name:inst.HEX[2]
+HEX[3] <= block_name:inst.HEX[3]
+HEX[4] <= block_name:inst.HEX[4]
+HEX[5] <= block_name:inst.HEX[5]
+HEX[6] <= block_name:inst.HEX[6]
+clk_in => clk_out:inst1.clk1
+
+
+|wysw|block_name:inst
+clkdiv => ~NO_FANOUT~
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wysw|clk_out:inst1
+clk1 => clkdiv~reg0.CLK
+clk1 => i[0].CLK
+clk1 => i[1].CLK
+clk1 => i[2].CLK
+clk1 => i[3].CLK
+clk1 => i[4].CLK
+clk1 => i[5].CLK
+clk1 => i[6].CLK
+clk1 => i[7].CLK
+clk1 => i[8].CLK
+clk1 => i[9].CLK
+clk1 => i[10].CLK
+clk1 => i[11].CLK
+clk1 => i[12].CLK
+clk1 => i[13].CLK
+clk1 => i[14].CLK
+clk1 => i[15].CLK
+clk1 => i[16].CLK
+clk1 => i[17].CLK
+clk1 => i[18].CLK
+clk1 => i[19].CLK
+clk1 => i[20].CLK
+clk1 => i[21].CLK
+clkdiv <= clkdiv~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

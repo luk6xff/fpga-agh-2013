@@ -1,0 +1,424 @@
+Classic Timing Analyzer report for proj
+Fri Dec 06 00:30:11 2013
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tco
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                           ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------------+--------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                            ; To                             ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------------+--------------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 10.939 ns                        ; licz:inst2|\licz:i[3]                           ; HEX0[6]                        ; clk        ; --       ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 160.51 MHz ( period = 6.230 ns ) ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0] ; freqdiv25milionow:inst1|clk_dv ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                 ;                                ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------------+--------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                                                                ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------+----------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                             ; To                                                 ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------+----------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 160.51 MHz ( period = 6.230 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.925 ns                ;
+; N/A                                     ; 161.52 MHz ( period = 6.191 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.886 ns                ;
+; N/A                                     ; 163.40 MHz ( period = 6.120 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.815 ns                ;
+; N/A                                     ; 163.45 MHz ( period = 6.118 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.925 ns                ;
+; N/A                                     ; 164.50 MHz ( period = 6.079 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.886 ns                ;
+; N/A                                     ; 166.09 MHz ( period = 6.021 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.716 ns                ;
+; N/A                                     ; 166.44 MHz ( period = 6.008 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.815 ns                ;
+; N/A                                     ; 169.23 MHz ( period = 5.909 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.716 ns                ;
+; N/A                                     ; 169.46 MHz ( period = 5.901 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.595 ns                ;
+; N/A                                     ; 169.87 MHz ( period = 5.887 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.582 ns                ;
+; N/A                                     ; 172.74 MHz ( period = 5.789 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.595 ns                ;
+; N/A                                     ; 172.83 MHz ( period = 5.786 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.481 ns                ;
+; N/A                                     ; 173.16 MHz ( period = 5.775 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.582 ns                ;
+; N/A                                     ; 173.64 MHz ( period = 5.759 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.453 ns                ;
+; N/A                                     ; 174.79 MHz ( period = 5.721 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.415 ns                ;
+; N/A                                     ; 176.24 MHz ( period = 5.674 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.481 ns                ;
+; N/A                                     ; 177.09 MHz ( period = 5.647 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.453 ns                ;
+; N/A                                     ; 177.15 MHz ( period = 5.645 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.340 ns                ;
+; N/A                                     ; 178.22 MHz ( period = 5.611 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.305 ns                ;
+; N/A                                     ; 178.28 MHz ( period = 5.609 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.415 ns                ;
+; N/A                                     ; 178.38 MHz ( period = 5.606 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.301 ns                ;
+; N/A                                     ; 179.08 MHz ( period = 5.584 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.278 ns                ;
+; N/A                                     ; 180.73 MHz ( period = 5.533 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.340 ns                ;
+; N/A                                     ; 181.46 MHz ( period = 5.511 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.205 ns                ;
+; N/A                                     ; 181.72 MHz ( period = 5.503 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[9]  ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.198 ns                ;
+; N/A                                     ; 181.85 MHz ( period = 5.499 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.305 ns                ;
+; N/A                                     ; 182.02 MHz ( period = 5.494 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.301 ns                ;
+; N/A                                     ; 182.75 MHz ( period = 5.472 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.278 ns                ;
+; N/A                                     ; 184.09 MHz ( period = 5.432 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[10] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.127 ns                ;
+; N/A                                     ; 185.15 MHz ( period = 5.401 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 5.095 ns                ;
+; N/A                                     ; 185.22 MHz ( period = 5.399 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.205 ns                ;
+; N/A                                     ; 185.49 MHz ( period = 5.391 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[9]  ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.198 ns                ;
+; N/A                                     ; 187.97 MHz ( period = 5.320 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[10] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.127 ns                ;
+; N/A                                     ; 189.07 MHz ( period = 5.289 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 5.095 ns                ;
+; N/A                                     ; 190.69 MHz ( period = 5.244 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[17] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 4.949 ns                ;
+; N/A                                     ; 190.91 MHz ( period = 5.238 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 5.025 ns                ;
+; N/A                                     ; 190.99 MHz ( period = 5.236 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 5.023 ns                ;
+; N/A                                     ; 191.02 MHz ( period = 5.235 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 5.022 ns                ;
+; N/A                                     ; 191.02 MHz ( period = 5.235 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 5.022 ns                ;
+; N/A                                     ; 191.06 MHz ( period = 5.234 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 5.021 ns                ;
+; N/A                                     ; 191.24 MHz ( period = 5.229 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 5.016 ns                ;
+; N/A                                     ; 191.31 MHz ( period = 5.227 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 5.014 ns                ;
+; N/A                                     ; 191.35 MHz ( period = 5.226 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 5.013 ns                ;
+; N/A                                     ; 191.35 MHz ( period = 5.226 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 5.013 ns                ;
+; N/A                                     ; 192.27 MHz ( period = 5.201 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.988 ns                ;
+; N/A                                     ; 192.34 MHz ( period = 5.199 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.986 ns                ;
+; N/A                                     ; 192.42 MHz ( period = 5.197 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.984 ns                ;
+; N/A                                     ; 192.46 MHz ( period = 5.196 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.983 ns                ;
+; N/A                                     ; 192.46 MHz ( period = 5.196 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.983 ns                ;
+; N/A                                     ; 192.49 MHz ( period = 5.195 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.982 ns                ;
+; N/A                                     ; 192.68 MHz ( period = 5.190 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.977 ns                ;
+; N/A                                     ; 192.75 MHz ( period = 5.188 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.975 ns                ;
+; N/A                                     ; 192.79 MHz ( period = 5.187 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.974 ns                ;
+; N/A                                     ; 192.79 MHz ( period = 5.187 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.974 ns                ;
+; N/A                                     ; 193.72 MHz ( period = 5.162 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.949 ns                ;
+; N/A                                     ; 194.86 MHz ( period = 5.132 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[17] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 4.949 ns                ;
+; N/A                                     ; 195.01 MHz ( period = 5.128 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.915 ns                ;
+; N/A                                     ; 195.08 MHz ( period = 5.126 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.913 ns                ;
+; N/A                                     ; 195.12 MHz ( period = 5.125 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.912 ns                ;
+; N/A                                     ; 195.12 MHz ( period = 5.125 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.912 ns                ;
+; N/A                                     ; 195.16 MHz ( period = 5.124 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.911 ns                ;
+; N/A                                     ; 195.35 MHz ( period = 5.119 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.906 ns                ;
+; N/A                                     ; 195.43 MHz ( period = 5.117 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.904 ns                ;
+; N/A                                     ; 195.47 MHz ( period = 5.116 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.903 ns                ;
+; N/A                                     ; 195.47 MHz ( period = 5.116 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.903 ns                ;
+; N/A                                     ; 196.31 MHz ( period = 5.094 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13]   ; clk        ; clk      ; None                        ; None                      ; 4.881 ns                ;
+; N/A                                     ; 196.43 MHz ( period = 5.091 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.878 ns                ;
+; N/A                                     ; 197.16 MHz ( period = 5.072 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[0]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[24]   ; clk        ; clk      ; None                        ; None                      ; 4.859 ns                ;
+; N/A                                     ; 197.82 MHz ( period = 5.055 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13]   ; clk        ; clk      ; None                        ; None                      ; 4.842 ns                ;
+; N/A                                     ; 198.69 MHz ( period = 5.033 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[1]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[24]   ; clk        ; clk      ; None                        ; None                      ; 4.820 ns                ;
+; N/A                                     ; 198.85 MHz ( period = 5.029 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.816 ns                ;
+; N/A                                     ; 198.93 MHz ( period = 5.027 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.814 ns                ;
+; N/A                                     ; 198.93 MHz ( period = 5.027 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[15] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 4.732 ns                ;
+; N/A                                     ; 198.97 MHz ( period = 5.026 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.813 ns                ;
+; N/A                                     ; 198.97 MHz ( period = 5.026 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.813 ns                ;
+; N/A                                     ; 199.00 MHz ( period = 5.025 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 199.20 MHz ( period = 5.020 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.807 ns                ;
+; N/A                                     ; 199.28 MHz ( period = 5.018 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 199.32 MHz ( period = 5.017 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.804 ns                ;
+; N/A                                     ; 199.32 MHz ( period = 5.017 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.804 ns                ;
+; N/A                                     ; 199.32 MHz ( period = 5.017 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 4.711 ns                ;
+; N/A                                     ; 200.32 MHz ( period = 4.992 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.779 ns                ;
+; N/A                                     ; 200.64 MHz ( period = 4.984 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13]   ; clk        ; clk      ; None                        ; None                      ; 4.771 ns                ;
+; N/A                                     ; 201.53 MHz ( period = 4.962 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[2]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[24]   ; clk        ; clk      ; None                        ; None                      ; 4.749 ns                ;
+; N/A                                     ; 203.46 MHz ( period = 4.915 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[15] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 4.732 ns                ;
+; N/A                                     ; 203.71 MHz ( period = 4.909 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.695 ns                ;
+; N/A                                     ; 203.79 MHz ( period = 4.907 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.693 ns                ;
+; N/A                                     ; 203.83 MHz ( period = 4.906 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.692 ns                ;
+; N/A                                     ; 203.83 MHz ( period = 4.906 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.692 ns                ;
+; N/A                                     ; 203.87 MHz ( period = 4.905 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.691 ns                ;
+; N/A                                     ; 203.87 MHz ( period = 4.905 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 4.711 ns                ;
+; N/A                                     ; 204.08 MHz ( period = 4.900 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.686 ns                ;
+; N/A                                     ; 204.16 MHz ( period = 4.898 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.684 ns                ;
+; N/A                                     ; 204.21 MHz ( period = 4.897 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.683 ns                ;
+; N/A                                     ; 204.21 MHz ( period = 4.897 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.683 ns                ;
+; N/A                                     ; 204.29 MHz ( period = 4.895 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.682 ns                ;
+; N/A                                     ; 204.37 MHz ( period = 4.893 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.680 ns                ;
+; N/A                                     ; 204.42 MHz ( period = 4.892 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.679 ns                ;
+; N/A                                     ; 204.42 MHz ( period = 4.892 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.679 ns                ;
+; N/A                                     ; 204.46 MHz ( period = 4.891 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.678 ns                ;
+; N/A                                     ; 204.67 MHz ( period = 4.886 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.673 ns                ;
+; N/A                                     ; 204.71 MHz ( period = 4.885 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13]   ; clk        ; clk      ; None                        ; None                      ; 4.672 ns                ;
+; N/A                                     ; 204.75 MHz ( period = 4.884 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.671 ns                ;
+; N/A                                     ; 204.79 MHz ( period = 4.883 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.670 ns                ;
+; N/A                                     ; 204.79 MHz ( period = 4.883 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.670 ns                ;
+; N/A                                     ; 205.25 MHz ( period = 4.872 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.658 ns                ;
+; N/A                                     ; 205.63 MHz ( period = 4.863 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[3]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[24]   ; clk        ; clk      ; None                        ; None                      ; 4.650 ns                ;
+; N/A                                     ; 205.85 MHz ( period = 4.858 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.645 ns                ;
+; N/A                                     ; 208.25 MHz ( period = 4.802 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 4.496 ns                ;
+; N/A                                     ; 208.59 MHz ( period = 4.794 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.581 ns                ;
+; N/A                                     ; 208.68 MHz ( period = 4.792 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.579 ns                ;
+; N/A                                     ; 208.72 MHz ( period = 4.791 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.578 ns                ;
+; N/A                                     ; 208.72 MHz ( period = 4.791 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.578 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.577 ns                ;
+; N/A                                     ; 208.99 MHz ( period = 4.785 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.572 ns                ;
+; N/A                                     ; 209.07 MHz ( period = 4.783 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.570 ns                ;
+; N/A                                     ; 209.12 MHz ( period = 4.782 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.569 ns                ;
+; N/A                                     ; 209.12 MHz ( period = 4.782 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.569 ns                ;
+; N/A                                     ; 209.78 MHz ( period = 4.767 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.553 ns                ;
+; N/A                                     ; 209.86 MHz ( period = 4.765 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.551 ns                ;
+; N/A                                     ; 209.86 MHz ( period = 4.765 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13]   ; clk        ; clk      ; None                        ; None                      ; 4.551 ns                ;
+; N/A                                     ; 209.91 MHz ( period = 4.764 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.550 ns                ;
+; N/A                                     ; 209.91 MHz ( period = 4.764 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.550 ns                ;
+; N/A                                     ; 209.95 MHz ( period = 4.763 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 210.17 MHz ( period = 4.758 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.544 ns                ;
+; N/A                                     ; 210.22 MHz ( period = 4.757 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.544 ns                ;
+; N/A                                     ; 210.26 MHz ( period = 4.756 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.542 ns                ;
+; N/A                                     ; 210.30 MHz ( period = 4.755 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.541 ns                ;
+; N/A                                     ; 210.30 MHz ( period = 4.755 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.541 ns                ;
+; N/A                                     ; 210.48 MHz ( period = 4.751 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13]   ; clk        ; clk      ; None                        ; None                      ; 4.538 ns                ;
+; N/A                                     ; 210.84 MHz ( period = 4.743 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[24]   ; clk        ; clk      ; None                        ; None                      ; 4.529 ns                ;
+; N/A                                     ; 211.42 MHz ( period = 4.730 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.516 ns                ;
+; N/A                                     ; 211.46 MHz ( period = 4.729 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.515 ns                ;
+; N/A                                     ; 211.46 MHz ( period = 4.729 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[4]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[24]   ; clk        ; clk      ; None                        ; None                      ; 4.516 ns                ;
+; N/A                                     ; 211.55 MHz ( period = 4.727 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.513 ns                ;
+; N/A                                     ; 211.60 MHz ( period = 4.726 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.512 ns                ;
+; N/A                                     ; 211.60 MHz ( period = 4.726 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.512 ns                ;
+; N/A                                     ; 211.64 MHz ( period = 4.725 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.511 ns                ;
+; N/A                                     ; 211.86 MHz ( period = 4.720 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.506 ns                ;
+; N/A                                     ; 211.95 MHz ( period = 4.718 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.504 ns                ;
+; N/A                                     ; 212.00 MHz ( period = 4.717 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.503 ns                ;
+; N/A                                     ; 212.00 MHz ( period = 4.717 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.503 ns                ;
+; N/A                                     ; 213.13 MHz ( period = 4.692 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.478 ns                ;
+; N/A                                     ; 213.22 MHz ( period = 4.690 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 4.496 ns                ;
+; N/A                                     ; 213.95 MHz ( period = 4.674 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 4.368 ns                ;
+; N/A                                     ; 214.92 MHz ( period = 4.653 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.440 ns                ;
+; N/A                                     ; 215.01 MHz ( period = 4.651 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.438 ns                ;
+; N/A                                     ; 215.05 MHz ( period = 4.650 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.437 ns                ;
+; N/A                                     ; 215.05 MHz ( period = 4.650 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13]   ; clk        ; clk      ; None                        ; None                      ; 4.437 ns                ;
+; N/A                                     ; 215.05 MHz ( period = 4.650 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.437 ns                ;
+; N/A                                     ; 215.10 MHz ( period = 4.649 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.436 ns                ;
+; N/A                                     ; 215.33 MHz ( period = 4.644 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.431 ns                ;
+; N/A                                     ; 215.42 MHz ( period = 4.642 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.429 ns                ;
+; N/A                                     ; 215.47 MHz ( period = 4.641 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.428 ns                ;
+; N/A                                     ; 215.47 MHz ( period = 4.641 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.428 ns                ;
+; N/A                                     ; 216.08 MHz ( period = 4.628 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[5]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[24]   ; clk        ; clk      ; None                        ; None                      ; 4.415 ns                ;
+; N/A                                     ; 216.31 MHz ( period = 4.623 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13]   ; clk        ; clk      ; None                        ; None                      ; 4.409 ns                ;
+; N/A                                     ; 216.50 MHz ( period = 4.619 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.405 ns                ;
+; N/A                                     ; 216.59 MHz ( period = 4.617 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.403 ns                ;
+; N/A                                     ; 216.64 MHz ( period = 4.616 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[7]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.403 ns                ;
+; N/A                                     ; 216.64 MHz ( period = 4.616 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.402 ns                ;
+; N/A                                     ; 216.64 MHz ( period = 4.616 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.402 ns                ;
+; N/A                                     ; 216.68 MHz ( period = 4.615 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.401 ns                ;
+; N/A                                     ; 216.73 MHz ( period = 4.614 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.401 ns                ;
+; N/A                                     ; 216.83 MHz ( period = 4.612 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.399 ns                ;
+; N/A                                     ; 216.87 MHz ( period = 4.611 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.398 ns                ;
+; N/A                                     ; 216.87 MHz ( period = 4.611 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.398 ns                ;
+; N/A                                     ; 216.92 MHz ( period = 4.610 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.396 ns                ;
+; N/A                                     ; 216.92 MHz ( period = 4.610 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.397 ns                ;
+; N/A                                     ; 217.01 MHz ( period = 4.608 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.394 ns                ;
+; N/A                                     ; 217.06 MHz ( period = 4.607 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.393 ns                ;
+; N/A                                     ; 217.06 MHz ( period = 4.607 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.393 ns                ;
+; N/A                                     ; 217.16 MHz ( period = 4.605 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.392 ns                ;
+; N/A                                     ; 217.25 MHz ( period = 4.603 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.390 ns                ;
+; N/A                                     ; 217.30 MHz ( period = 4.602 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.389 ns                ;
+; N/A                                     ; 217.30 MHz ( period = 4.602 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.389 ns                ;
+; N/A                                     ; 217.34 MHz ( period = 4.601 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[24]   ; clk        ; clk      ; None                        ; None                      ; 4.387 ns                ;
+; N/A                                     ; 217.77 MHz ( period = 4.592 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.378 ns                ;
+; N/A                                     ; 217.86 MHz ( period = 4.590 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.376 ns                ;
+; N/A                                     ; 217.91 MHz ( period = 4.589 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.375 ns                ;
+; N/A                                     ; 217.91 MHz ( period = 4.589 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.375 ns                ;
+; N/A                                     ; 217.96 MHz ( period = 4.588 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.374 ns                ;
+; N/A                                     ; 218.10 MHz ( period = 4.585 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13]   ; clk        ; clk      ; None                        ; None                      ; 4.371 ns                ;
+; N/A                                     ; 218.20 MHz ( period = 4.583 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.369 ns                ;
+; N/A                                     ; 218.25 MHz ( period = 4.582 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[13] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.368 ns                ;
+; N/A                                     ; 218.29 MHz ( period = 4.581 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11]   ; clk        ; clk      ; None                        ; None                      ; 4.367 ns                ;
+; N/A                                     ; 218.34 MHz ( period = 4.580 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[6]    ; clk        ; clk      ; None                        ; None                      ; 4.366 ns                ;
+; N/A                                     ; 218.34 MHz ( period = 4.580 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21]   ; clk        ; clk      ; None                        ; None                      ; 4.366 ns                ;
+; N/A                                     ; 218.48 MHz ( period = 4.577 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[8]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.364 ns                ;
+; N/A                                     ; 219.15 MHz ( period = 4.563 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[24]   ; clk        ; clk      ; None                        ; None                      ; 4.349 ns                ;
+; N/A                                     ; 219.20 MHz ( period = 4.562 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[21] ; freqdiv25milionow:inst1|\freqdiv25milionow:clk_dvn ; clk        ; clk      ; None                        ; None                      ; 4.368 ns                ;
+; N/A                                     ; 219.54 MHz ( period = 4.555 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[11] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[19]   ; clk        ; clk      ; None                        ; None                      ; 4.341 ns                ;
+; N/A                                     ; 220.65 MHz ( period = 4.532 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22] ; freqdiv25milionow:inst1|clk_dv                     ; clk        ; clk      ; None                        ; None                      ; 4.226 ns                ;
+; N/A                                     ; 221.29 MHz ( period = 4.519 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.305 ns                ;
+; N/A                                     ; 221.39 MHz ( period = 4.517 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[14]   ; clk        ; clk      ; None                        ; None                      ; 4.303 ns                ;
+; N/A                                     ; 221.43 MHz ( period = 4.516 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[12]   ; clk        ; clk      ; None                        ; None                      ; 4.302 ns                ;
+; N/A                                     ; 221.43 MHz ( period = 4.516 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[16]   ; clk        ; clk      ; None                        ; None                      ; 4.302 ns                ;
+; N/A                                     ; 221.48 MHz ( period = 4.515 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18]   ; clk        ; clk      ; None                        ; None                      ; 4.301 ns                ;
+; N/A                                     ; 221.68 MHz ( period = 4.511 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[9]  ; freqdiv25milionow:inst1|\freqdiv25milionow:i[20]   ; clk        ; clk      ; None                        ; None                      ; 4.298 ns                ;
+; N/A                                     ; 221.73 MHz ( period = 4.510 ns )                    ; freqdiv25milionow:inst1|\freqdiv25milionow:i[18] ; freqdiv25milionow:inst1|\freqdiv25milionow:i[22]   ; clk        ; clk      ; None                        ; None                      ; 4.296 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                  ;                                                    ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------+----------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------+
+; tco                                                                              ;
++-------+--------------+------------+-----------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                  ; To      ; From Clock ;
++-------+--------------+------------+-----------------------+---------+------------+
+; N/A   ; None         ; 10.939 ns  ; licz:inst2|\licz:i[3] ; HEX0[6] ; clk        ;
+; N/A   ; None         ; 10.917 ns  ; licz:inst2|\licz:i[3] ; HEX0[4] ; clk        ;
+; N/A   ; None         ; 10.914 ns  ; licz:inst2|\licz:i[3] ; HEX0[5] ; clk        ;
+; N/A   ; None         ; 10.903 ns  ; licz:inst2|\licz:i[2] ; HEX0[6] ; clk        ;
+; N/A   ; None         ; 10.882 ns  ; licz:inst2|\licz:i[2] ; HEX0[4] ; clk        ;
+; N/A   ; None         ; 10.871 ns  ; licz:inst2|\licz:i[2] ; HEX0[5] ; clk        ;
+; N/A   ; None         ; 10.736 ns  ; licz:inst2|\licz:i[0] ; HEX0[6] ; clk        ;
+; N/A   ; None         ; 10.702 ns  ; licz:inst2|\licz:i[0] ; HEX0[5] ; clk        ;
+; N/A   ; None         ; 10.699 ns  ; licz:inst2|\licz:i[3] ; HEX0[3] ; clk        ;
+; N/A   ; None         ; 10.689 ns  ; licz:inst2|\licz:i[3] ; HEX0[0] ; clk        ;
+; N/A   ; None         ; 10.689 ns  ; licz:inst2|\licz:i[3] ; HEX0[2] ; clk        ;
+; N/A   ; None         ; 10.688 ns  ; licz:inst2|\licz:i[3] ; HEX0[1] ; clk        ;
+; N/A   ; None         ; 10.685 ns  ; licz:inst2|\licz:i[0] ; HEX0[4] ; clk        ;
+; N/A   ; None         ; 10.660 ns  ; licz:inst2|\licz:i[2] ; HEX0[3] ; clk        ;
+; N/A   ; None         ; 10.651 ns  ; licz:inst2|\licz:i[2] ; HEX0[0] ; clk        ;
+; N/A   ; None         ; 10.651 ns  ; licz:inst2|\licz:i[2] ; HEX0[2] ; clk        ;
+; N/A   ; None         ; 10.649 ns  ; licz:inst2|\licz:i[2] ; HEX0[1] ; clk        ;
+; N/A   ; None         ; 10.644 ns  ; licz:inst2|\licz:i[1] ; HEX0[6] ; clk        ;
+; N/A   ; None         ; 10.623 ns  ; licz:inst2|\licz:i[1] ; HEX0[4] ; clk        ;
+; N/A   ; None         ; 10.606 ns  ; licz:inst2|\licz:i[1] ; HEX0[5] ; clk        ;
+; N/A   ; None         ; 10.488 ns  ; licz:inst2|\licz:i[0] ; HEX0[2] ; clk        ;
+; N/A   ; None         ; 10.488 ns  ; licz:inst2|\licz:i[0] ; HEX0[3] ; clk        ;
+; N/A   ; None         ; 10.478 ns  ; licz:inst2|\licz:i[0] ; HEX0[0] ; clk        ;
+; N/A   ; None         ; 10.477 ns  ; licz:inst2|\licz:i[0] ; HEX0[1] ; clk        ;
+; N/A   ; None         ; 10.397 ns  ; licz:inst2|\licz:i[1] ; HEX0[2] ; clk        ;
+; N/A   ; None         ; 10.390 ns  ; licz:inst2|\licz:i[1] ; HEX0[3] ; clk        ;
+; N/A   ; None         ; 10.382 ns  ; licz:inst2|\licz:i[1] ; HEX0[1] ; clk        ;
+; N/A   ; None         ; 10.379 ns  ; licz:inst2|\licz:i[1] ; HEX0[0] ; clk        ;
++-------+--------------+------------+-----------------------+---------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Dec 06 00:30:10 2013
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off proj -c proj --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "freqdiv25milionow:inst1|clk_dv" as buffer
+Info: Clock "clk" has Internal fmax of 160.51 MHz between source register "freqdiv25milionow:inst1|\freqdiv25milionow:i[0]" and destination register "freqdiv25milionow:inst1|clk_dv" (period= 6.23 ns)
+    Info: + Longest register to register delay is 5.925 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X21_Y11_N9; Fanout = 2; REG Node = 'freqdiv25milionow:inst1|\freqdiv25milionow:i[0]'
+        Info: 2: + IC(0.311 ns) + CELL(0.393 ns) = 0.704 ns; Loc. = LCCOMB_X21_Y11_N8; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~1'
+        Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 0.775 ns; Loc. = LCCOMB_X21_Y11_N10; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~3'
+        Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 0.846 ns; Loc. = LCCOMB_X21_Y11_N12; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~5'
+        Info: 5: + IC(0.000 ns) + CELL(0.159 ns) = 1.005 ns; Loc. = LCCOMB_X21_Y11_N14; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~7'
+        Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 1.076 ns; Loc. = LCCOMB_X21_Y11_N16; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~9'
+        Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 1.147 ns; Loc. = LCCOMB_X21_Y11_N18; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~11'
+        Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 1.218 ns; Loc. = LCCOMB_X21_Y11_N20; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~13'
+        Info: 9: + IC(0.000 ns) + CELL(0.071 ns) = 1.289 ns; Loc. = LCCOMB_X21_Y11_N22; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~15'
+        Info: 10: + IC(0.000 ns) + CELL(0.071 ns) = 1.360 ns; Loc. = LCCOMB_X21_Y11_N24; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~17'
+        Info: 11: + IC(0.000 ns) + CELL(0.071 ns) = 1.431 ns; Loc. = LCCOMB_X21_Y11_N26; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~19'
+        Info: 12: + IC(0.000 ns) + CELL(0.071 ns) = 1.502 ns; Loc. = LCCOMB_X21_Y11_N28; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~21'
+        Info: 13: + IC(0.000 ns) + CELL(0.146 ns) = 1.648 ns; Loc. = LCCOMB_X21_Y11_N30; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~23'
+        Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 1.719 ns; Loc. = LCCOMB_X21_Y10_N0; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~25'
+        Info: 15: + IC(0.000 ns) + CELL(0.071 ns) = 1.790 ns; Loc. = LCCOMB_X21_Y10_N2; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~27'
+        Info: 16: + IC(0.000 ns) + CELL(0.071 ns) = 1.861 ns; Loc. = LCCOMB_X21_Y10_N4; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~29'
+        Info: 17: + IC(0.000 ns) + CELL(0.071 ns) = 1.932 ns; Loc. = LCCOMB_X21_Y10_N6; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~31'
+        Info: 18: + IC(0.000 ns) + CELL(0.071 ns) = 2.003 ns; Loc. = LCCOMB_X21_Y10_N8; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~33'
+        Info: 19: + IC(0.000 ns) + CELL(0.071 ns) = 2.074 ns; Loc. = LCCOMB_X21_Y10_N10; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~35'
+        Info: 20: + IC(0.000 ns) + CELL(0.071 ns) = 2.145 ns; Loc. = LCCOMB_X21_Y10_N12; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~37'
+        Info: 21: + IC(0.000 ns) + CELL(0.410 ns) = 2.555 ns; Loc. = LCCOMB_X21_Y10_N14; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Add0~38'
+        Info: 22: + IC(0.259 ns) + CELL(0.275 ns) = 3.089 ns; Loc. = LCCOMB_X21_Y10_N26; Fanout = 3; COMB Node = 'freqdiv25milionow:inst1|Equal0~5'
+        Info: 23: + IC(1.041 ns) + CELL(0.410 ns) = 4.540 ns; Loc. = LCCOMB_X21_Y11_N6; Fanout = 2; COMB Node = 'freqdiv25milionow:inst1|Equal0~7'
+        Info: 24: + IC(0.725 ns) + CELL(0.660 ns) = 5.925 ns; Loc. = LCFF_X20_Y15_N29; Fanout = 1; REG Node = 'freqdiv25milionow:inst1|clk_dv'
+        Info: Total cell delay = 3.589 ns ( 60.57 % )
+        Info: Total interconnect delay = 2.336 ns ( 39.43 % )
+    Info: - Smallest clock skew is -0.091 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.568 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clk'
+            Info: 2: + IC(1.032 ns) + CELL(0.537 ns) = 2.568 ns; Loc. = LCFF_X20_Y15_N29; Fanout = 1; REG Node = 'freqdiv25milionow:inst1|clk_dv'
+            Info: Total cell delay = 1.536 ns ( 59.81 % )
+            Info: Total interconnect delay = 1.032 ns ( 40.19 % )
+        Info: - Longest clock path from clock "clk" to source register is 2.659 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clk'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 26; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(1.005 ns) + CELL(0.537 ns) = 2.659 ns; Loc. = LCFF_X21_Y11_N9; Fanout = 2; REG Node = 'freqdiv25milionow:inst1|\freqdiv25milionow:i[0]'
+            Info: Total cell delay = 1.536 ns ( 57.77 % )
+            Info: Total interconnect delay = 1.123 ns ( 42.23 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tco from clock "clk" to destination pin "HEX0[6]" through register "licz:inst2|\licz:i[3]" is 10.939 ns
+    Info: + Longest clock path from clock "clk" to source register is 6.067 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clk'
+        Info: 2: + IC(1.032 ns) + CELL(0.787 ns) = 2.818 ns; Loc. = LCFF_X20_Y15_N29; Fanout = 1; REG Node = 'freqdiv25milionow:inst1|clk_dv'
+        Info: 3: + IC(1.658 ns) + CELL(0.000 ns) = 4.476 ns; Loc. = CLKCTRL_G3; Fanout = 5; COMB Node = 'freqdiv25milionow:inst1|clk_dv~clkctrl'
+        Info: 4: + IC(1.054 ns) + CELL(0.537 ns) = 6.067 ns; Loc. = LCFF_X27_Y1_N1; Fanout = 10; REG Node = 'licz:inst2|\licz:i[3]'
+        Info: Total cell delay = 2.323 ns ( 38.29 % )
+        Info: Total interconnect delay = 3.744 ns ( 61.71 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 4.622 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X27_Y1_N1; Fanout = 10; REG Node = 'licz:inst2|\licz:i[3]'
+        Info: 2: + IC(0.570 ns) + CELL(0.437 ns) = 1.007 ns; Loc. = LCCOMB_X27_Y1_N8; Fanout = 1; COMB Node = 'dekoder:inst|HEX0[6]~24'
+        Info: 3: + IC(0.817 ns) + CELL(2.798 ns) = 4.622 ns; Loc. = PIN_AF10; Fanout = 0; PIN Node = 'HEX0[6]'
+        Info: Total cell delay = 3.235 ns ( 69.99 % )
+        Info: Total interconnect delay = 1.387 ns ( 30.01 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 152 megabytes
+    Info: Processing ended: Fri Dec 06 00:30:11 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

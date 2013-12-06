@@ -1,0 +1,71 @@
+|ledy
+out_clk <= clk_out.DB_MAX_OUTPUT_PORT_TYPE
+clk => freq_div:inst1.clk_in
+leds[0] <= green_leds:inst.leds[0]
+leds[1] <= green_leds:inst.leds[1]
+leds[2] <= green_leds:inst.leds[2]
+leds[3] <= green_leds:inst.leds[3]
+leds[4] <= green_leds:inst.leds[4]
+leds[5] <= green_leds:inst.leds[5]
+leds[6] <= green_leds:inst.leds[6]
+leds[7] <= green_leds:inst.leds[7]
+leds[8] <= green_leds:inst.leds[8]
+clk_l => green_leds:inst.led_clk
+
+
+|ledy|freq_div:inst1
+clk_in => clk_out~reg0.CLK
+clk_in => i[0].CLK
+clk_in => i[1].CLK
+clk_in => i[2].CLK
+clk_in => i[3].CLK
+clk_in => i[4].CLK
+clk_in => i[5].CLK
+clk_in => i[6].CLK
+clk_in => i[7].CLK
+clk_in => i[8].CLK
+clk_in => i[9].CLK
+clk_in => i[10].CLK
+clk_in => i[11].CLK
+clk_in => i[12].CLK
+clk_in => i[13].CLK
+clk_in => i[14].CLK
+clk_in => i[15].CLK
+clk_in => i[16].CLK
+clk_in => i[17].CLK
+clk_in => i[18].CLK
+clk_in => i[19].CLK
+clk_in => i[20].CLK
+clk_in => i[21].CLK
+clk_in => i[22].CLK
+clk_in => i[23].CLK
+clk_in => i[24].CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ledy|green_leds:inst
+led_clk => leds[0]~reg0.CLK
+led_clk => leds[1]~reg0.CLK
+led_clk => leds[2]~reg0.CLK
+led_clk => leds[3]~reg0.CLK
+led_clk => leds[4]~reg0.CLK
+led_clk => leds[5]~reg0.CLK
+led_clk => leds[6]~reg0.CLK
+led_clk => leds[7]~reg0.CLK
+led_clk => leds[8]~reg0.CLK
+led_clk => flag.CLK
+led_clk => i[0].CLK
+led_clk => i[1].CLK
+led_clk => i[2].CLK
+led_clk => i[3].CLK
+leds[0] <= leds[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= leds[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= leds[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= leds[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= leds[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= leds[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= leds[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[7] <= leds[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+leds[8] <= leds[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
